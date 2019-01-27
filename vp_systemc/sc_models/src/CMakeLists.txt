@@ -1,0 +1,29 @@
+if(OR1KSIM_FOUND)
+		ADD_EXECUTABLE(scvp_etc_iss_demo
+			sca_adc.cpp
+		  sc_main.cpp
+		  sc_logger.cpp
+		  sc_tlm_adc.cpp
+		  sc_tlm_ecu.cpp
+		  sc_tlm_ecu_iss.cpp
+		  sc_tlm_pwm.cpp
+		)
+		target_link_libraries(scvp_etc_iss_demo
+		  ${SYSTEMC_LIBRARIES}
+		  ${SYSTEMCAMS_LIBRARIES}
+		  ${OR1KSIM_LIBRARIES}
+		)
+else()
+		ADD_EXECUTABLE(scvp_etc_demo
+		  sca_adc.cpp
+		  sc_logger.cpp
+		  sc_main.cpp
+		  sc_tlm_adc.cpp
+		  sc_tlm_ecu.cpp
+		  sc_tlm_pwm.cpp
+		)
+		target_link_libraries(scvp_etc_demo
+		  ${SYSTEMC_LIBRARIES}
+		  ${SYSTEMCAMS_LIBRARIES}
+		)
+endif()

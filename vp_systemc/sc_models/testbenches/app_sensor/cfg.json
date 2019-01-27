@@ -1,0 +1,17 @@
+{
+	"system":{
+		"tstep"        : 20e-6,
+		"tsim"         : 0.2,
+		"tracefile"    : "csv"
+	},
+	"i_throttle_motor":{
+		"Jeq"          : 0.0021,
+		"Beq"          : 0.0088,
+		"K"            : 0.383,
+		"R"            : 1.5,
+		"L"            : 1.5e-3,
+		"Ks"           : 0.087,
+		"Tpl"          : 0.396,
+		"Tf"           : 0.284
+	}
+}
